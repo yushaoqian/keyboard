@@ -1,0 +1,45 @@
+#con{
+	border:10px solid pink;
+	width: 1100px;
+	height: 600px;
+	border-radius: 20%;
+	position:absolute;
+	left:0;right:0;top:0;bottom:0;
+	margin: auto;
+	background-color: pink;
+	/*绝对定位，上下左右为零，外边距auto*/
+	box-shadow:0 0 50px 10px pink;
+	/*一二两个值为零，希望灯从正上方照，阴影不够改第三四个值
+	（三羽化程度，四扩散程度）*/
+}
+span{
+	border:2px solid pink;
+	background-color: white;
+	height: 50px;width: 50px;
+	line-height: 50px;
+	font-size:30px;
+	border-radius: 50%;
+	text-align: center;
+	display: block;
+	box-shadow: 0 0 2px pink;
+	text-shadow: 0 0 2px gray;
+	position: absolute;
+	top: 0px;
+	box-sizing: border-box;
+	/*border-sizing:border-box总盒子是50px,而不是54px*/
+}
+span.dh{
+	/*动画名字*/
+	animation-name:dh;
+	/*动画持续时间*/
+	animation-duration:0.5s;
+	/*动画结束后保持什么状态*/
+	animation-fill-mode:forwards;/*保持结束状态*/	
+	/*动画执行时的快慢速度*/
+	animation-timing-function:linear;/*匀速*/
+}
+/*创建动画*/
+@keyframes dh{
+	from{opacity: 1;transform:scale(1) rotate(0deg);}/*动画开始*/
+	to{opacity: 0;transform:scale(2) rotate(360deg);}/*动画结束*/
+}
